@@ -5,11 +5,6 @@ green='\e[32m'
 blue='\e[34m'
 nc='\e[0m'
 
-if [ "$(id -u)" != 0 ]; then
-  echo -e "${red}Run me as sudo${nc}"
-  exit 1
-fi
-
 WS_ROOT_PATH=$(dirname "$(realpath "$0")")
 WS_INSTALL_PATH="$WS_ROOT_PATH/install"
 WS_CONFIG_PATH="$WS_ROOT_PATH/config"
@@ -26,4 +21,9 @@ for file_path in "${files[@]}"; do
   file=${file%.*}
   echo -e "${blue}Installing $file.${nc}"
   "$file_path"
+  if [ $? == 0 ]; then
+    echo -e "${green}$file installed${nc}"
+  else
+    echo -e "${red}$file installation failed${nc}"
+  fi
 done

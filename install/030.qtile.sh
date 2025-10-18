@@ -26,4 +26,5 @@ pip install --upgrade pip wheel
 pip install qtile
 
 # Create config syslink
+mkdir -p "$HOME/.config/qtile"
 ln -sf "$WS_CONFIG_PATH/qtile/config.py" "$HOME/.config/qtile/config.py"

@@ -11,7 +11,7 @@ source $ZSH_CONF_PATH/keybindings.zsh
 
 
 # Source plugins
-export ZSH_PLUGINS_PATH="$ZSH_CONF_PATH/plugins"
+export ZSH_PLUGINS_PATH="$HOME/.config/zsh/plugins"
 source $ZSH_PLUGINS_PATH/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH_PLUGINS_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

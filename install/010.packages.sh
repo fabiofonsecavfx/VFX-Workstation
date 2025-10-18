@@ -13,4 +13,9 @@ sudo dnf install -y tar \
   ripgrep \
   fd-find \
   bat \
-  cmake
+  cmake \
+  luarocks
+
+# Lazygit
+sudo dnf copr enable dejan/lazygit
+sudo dnf install -y lazygit

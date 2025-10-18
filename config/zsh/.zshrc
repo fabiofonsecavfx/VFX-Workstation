@@ -1,4 +1,4 @@
-export ZSH_CONF_PATH="$HOME/.config/zsh"
+export ZSH_CONF_PATH="$HOME/.config/zsh/config"
 
 source <(fzf --zsh)
 

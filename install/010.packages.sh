@@ -17,5 +17,5 @@ sudo dnf install -y tar \
   luarocks
 
 # Lazygit
-sudo dnf copr enable -y dejan/lazygit
+sudo dnf copr enable -y atim/lazygit
 sudo dnf install -y lazygit

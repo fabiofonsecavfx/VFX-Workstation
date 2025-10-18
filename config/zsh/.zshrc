@@ -9,7 +9,6 @@ source $ZSH_CONF_PATH/completions.zsh
 source $ZSH_CONF_PATH/aliases.zsh
 source $ZSH_CONF_PATH/keybindings.zsh
 
-
 # Source plugins
 export ZSH_PLUGINS_PATH="$HOME/.config/zsh/plugins"
 source $ZSH_PLUGINS_PATH/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -23,3 +22,4 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(oh-my-posh init zsh --config "$HOME/.config/zsh/config/gruvbox.omp.json")"
+eval "$(zoxide init zsh)"

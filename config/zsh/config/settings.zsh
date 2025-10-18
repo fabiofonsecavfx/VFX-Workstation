@@ -1,0 +1,34 @@
+# History
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+
+# Navigation
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+setopt PUSHD_SILENT
+DIRSTACK_SIZE=10
+
+# Completion
+setopt COMPLETE_IN_WORD
+setopt ALWAYS_TO_END
+setopt AUTO_MENU
+setopt AUTO_LIST
+setopt AUTO_PARAM_SLASH
+unsetopt FLOW_CONTROL
+unsetopt MENU_COMPLETE
+unsetopt NO_CASE_GLOB
+
+# Other
+setopt CORRECT
+setopt EXTENDED_GLOB
+setopt NO_BEEP

@@ -4,8 +4,8 @@ set -e
 
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
-mkdir -p "$HOME"/.local/bin
-export PATH="$HOME/.local/bin:$PATH"
+mkdir -p "$HOME/.local/bin"
+mkdir -p "$HOME/.local/share/applications"
 
 # Create symbolic links to add kitty and kitten to PATH (assuming ~/.local/bin is in
 # your system-wide PATH)

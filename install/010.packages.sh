@@ -2,4 +2,6 @@
 
 set -e
 
-sudo dnf install -y tar
+sudo dnf install -y tar \
+  zsh \
+  unzip

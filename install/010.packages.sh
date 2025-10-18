@@ -9,4 +9,5 @@ sudo dnf install -y tar \
   fzf \
   zoxide \
   ripgrep \
-  fd-find
+  fd-find \
+  bat

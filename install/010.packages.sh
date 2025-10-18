@@ -12,4 +12,5 @@ sudo dnf install -y tar \
   zoxide \
   ripgrep \
   fd-find \
-  bat
+  bat \
+  cmake

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 chsh -s "$(which zsh)"
 
 # Install zsh plugins
@@ -16,5 +18,5 @@ git clone "https://github.com/zsh-users/zsh-completions.git" "$plugins_path/zsh-
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
 # Create zsh symlinks
-ln -sfv "$WS_CONFIG_PATH/zsh/plugins" "$zsh_config_path"
+ln -sfv "$WS_CONFIG_PATH/zsh/plugins/*" "$zsh_config_path"
 ln -sfv "$WS_CONFIG_PATH/zsh/.zshrc" "$HOME"

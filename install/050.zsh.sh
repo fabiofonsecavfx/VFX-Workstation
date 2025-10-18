@@ -6,7 +6,7 @@ chsh -s "$(which zsh)"
 
 # Install zsh zsh_plugins
 zsh_config_path="$HOME/.config/zsh/config"
-zsh_plugins_path="$zsh_config_path/zsh_plugins"
+zsh_plugins_path="$HOME/.config/zsh/zsh_plugins"
 
 mkdir -p "$zsh_plugins_path"
 mkdir -p "$zsh_config_path"

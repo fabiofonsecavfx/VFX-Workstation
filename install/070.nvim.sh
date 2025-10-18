@@ -4,7 +4,6 @@ set -e
 
 # Install Nvim
 mkdir -p "$HOME/src"
-mkdir -p "$HOME/.local/bin"
 cd "$HOME/src" || exit
 git clone https://github.com/neovim/neovim
 cd neovim || exit

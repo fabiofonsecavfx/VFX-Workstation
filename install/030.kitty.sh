@@ -1,10 +1,5 @@
 #!/bin/bash
 
-source "$WS_UTILS_PATH"/texts.sh
-
-# Install kitty
-txt_blue "Installing Kitty"
-
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
 mkdir -p "$HOME"/.local/bin
@@ -34,6 +29,5 @@ cp "$src_icon" "$target_icon"
 
 sudo sed -i "s|^Icon=.*|Icon=${target_icon}|" "$desktop_file_src"
 
-# Create kitty symlinks
 ln -sfv "$WS_CONFIG_PATH/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 ln -sfv "$WS_CONFIG_PATH/kitty/gruvbox-dark.conf" "$HOME/.config/kitty/gruvbox-dark.conf"

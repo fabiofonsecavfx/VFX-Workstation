@@ -3,7 +3,7 @@
 # Install Groups
 sudo dnf groupinstall -y \
   "base-x" \
-  "Standart" \
+  "Standard" \
   "Hardware Support" \
   "Input Methods" \
   "Common NetworkManager Submodules" \

@@ -2,8 +2,6 @@
 
 set -e
 
-sudo dnf update -y
-
 sudo dnf config-manager --set-enabled crb
 
 sudo dnf install epel-release -y
@@ -15,3 +13,5 @@ sudo dnf install -y dnf-plugins-core
 
 sudo dnf install flatpak -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+sudo dnf update -y

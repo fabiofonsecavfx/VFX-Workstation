@@ -1,14 +1,15 @@
 #!/bin/bash
 
 # Install Groups
-sudo dnf groupinstall -y \
+sudo dnf groupinstall -y --with-optional \
   "base-x" \
   "Standard" \
   "Hardware Support" \
   "Input Methods" \
   "Common NetworkManager Submodules" \
   "Development Tools" \
-  "Fonts"
+  "Fonts" \
+  "Multimedia"
 
 # Install Packages
 sudo dnf install -y \

@@ -20,7 +20,8 @@ sudo dnf install -y \
   git \
   wget \
   curl \
-  i3
+  i3 \
+  gnome-themes-extra
 
 # Install LightDM without extra stuff
 sudo dnf install -y --setopt=install_weak_deps=False lightdm slick-greeter

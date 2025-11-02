@@ -27,8 +27,8 @@ sudo dnf install -y --setopt=install_weak_deps=False lightdm slick-greeter
 sudo cp -fv "$WS_CONFIG_PATH"/lightdm/* /etc/lightdm
 
 # Setup services and scripts
-cp -v "$WS_SCRIPTS_PATH"/* /usr/local/bin
-cp -v "$WS_SERVICES_PATH"/* /etc/systemd/system
+sudo cp -v "$WS_SCRIPTS_PATH"/* /usr/local/bin
+sudo cp -v "$WS_SERVICES_PATH"/* /etc/systemd/system
 
 services=("$WS_SERVICES_PATH"/*)
 for serv in "${services[@]}"; do

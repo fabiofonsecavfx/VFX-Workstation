@@ -32,7 +32,8 @@ sudo cp -v "$WS_SERVICES_PATH"/* /etc/systemd/system
 
 services=("$WS_SERVICES_PATH"/*)
 for serv in "${services[@]}"; do
-  sudo systemctl enable "$serv"
+  serv_name=$(basename "$serv")
+  sudo systemctl enable "$serv_name"
 done
 
 # Install feh

@@ -24,7 +24,7 @@ sudo dnf install -y \
   gnome-themes-extra
 
 # Install LightDM without extra stuff
-sudo dnf install -y --setopt=install_weak_deps=False lightdm slick-greeter
+sudo dnf install -y --setopt=install_weak_deps=False lightdm lightdm-gtk-greeter
 sudo cp -fv "$WS_CONFIG_PATH"/lightdm/*.conf /etc/lightdm
 sudo systemctl set-default graphical.target
 

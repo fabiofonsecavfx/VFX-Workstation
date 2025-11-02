@@ -4,6 +4,10 @@ set -e
 
 chsh -s "$(which zsh)"
 
+# Install shell tools
+sudo dnf isntall -y fzf zoxide ripgrep fd-find rust-toolset
+sudo cargo install eza
+
 # Install zsh zsh_plugins
 zsh_plugins_path="$HOME/.config/zsh/plugins"
 

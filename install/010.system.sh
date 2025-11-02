@@ -27,6 +27,7 @@ sudo dnf install -y \
 sudo dnf install -y --setopt=install_weak_deps=False lightdm slick-greeter
 sudo cp -fv "$WS_CONFIG_PATH"/lightdm/*.conf /etc/lightdm
 sudo cp -rfv "$WS_CONFIG_PATH"/lightdm/LightDM /usr/shre/themes
+sudo systemctl set-default graphical.target
 
 # Setup services and scripts
 sudo cp -v "$WS_SCRIPTS_PATH"/* /usr/local/bin

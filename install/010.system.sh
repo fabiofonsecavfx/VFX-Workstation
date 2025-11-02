@@ -17,7 +17,7 @@ sudo dnf install -y cmake ninja-build pkgconf-pkg-config git wget curl i3 \
   gnome-themes-extra imlib2 imlib2-devel libX11-devel libXinerama-devel \
   libXext-devel libcurl-devel libXt-devel clang gcc-c++ python3-sphinx \
   python3-packaging cairo-devel libuv-devel xcb-util-devel libxcb-devel \
-  xcb-proto xcb-util-image-devel xcb-util-wm-devexcb-util-xrm-devel \
+  xcb-proto xcb-util-image-devel xcb-util-wm-devel xcb-util-xrm-devel \
   xcb-util-cursor-devel alsa-lib-devel pulseaudio-libs-devel i3-devel \
   jsoncpp-devel libmpdclient-devel libcurl-devel libnl3-devel
 

@@ -1,0 +1,9 @@
+#login_window,
+#panel,
+.dialog,
+.login-dialog {
+    background-color: rgba(30, 30, 30, 1.0); /* solid dark gray */
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}

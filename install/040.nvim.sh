@@ -28,4 +28,4 @@ cargo install --locked tree-sitter-cli
 
 # Nodejs and MMDC
 sudo dnf module enable nodejs:20
-sudo dnf install nodejs
+sudo dnf install -y nodejs

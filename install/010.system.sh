@@ -13,19 +13,18 @@ sudo dnf groupinstall -y --with-optional \
   "Multimedia"
 
 # Install Packages
-sudo dnf install -y \
-  cmake \
-  ninja-build \
-  pkgconf-pkg-config \
-  git \
-  wget \
-  curl \
-  i3 \
-  gnome-themes-extra
+sudo dnf install -y cmake ninja-build pkgconf-pkg-config git wget curl i3 \
+  gnome-themes-extra imlib2 imlib2-devel libX11-devel libXinerama-devel \
+  libXext-devel libcurl-devel libXt-devel clang gcc-c++ python3-sphinx \
+  python3-packaging cairo-devel libuv-devel xcb-util-devel libxcb-devel \
+  xcb-proto xcb-util-image-devel xcb-util-wm-devexcb-util-xrm-devel \
+  xcb-util-cursor-devel alsa-lib-devel pulseaudio-libs-devel i3-devel \
+  jsoncpp-devel libmpdclient-devel libcurl-devel libnl3-devel
 
-# Install LightDM without extra stuff
+# Install LightDM
 sudo dnf install -y --setopt=install_weak_deps=False lightdm lightdm-gtk-greeter
 sudo cp -fv "$WS_CONFIG_PATH"/lightdm/*.conf /etc/lightdm
+ln -sfv "$WS_CONFIG_PATH"/lightdm/.profile "$HOME"/.profile
 sudo systemctl set-default graphical.target
 
 # Setup services and scripts
@@ -41,28 +40,20 @@ done
 # Install Fonts
 font_dir="$HOME/.local/share/fonts"
 mkdir -p "$font_dir"
-
 # AdwaitaMono Nerd Font
 tar -xvf "$WS_ASSETS_PATH/AdwaitaMono.tar.gz" -C "$font_dir"
 fc-cache -fv
 
 # Install feh
-# feh dependencies
-sudo dnf install -y \
-  imlib2 \
-  imlib2-devel \
-  libX11-devel \
-  libXinerama-devel \
-  libXext-devel \
-  libcurl-devel \
-  libXt-devel
-# Clone and build feh
 git clone https://github.com/derf/feh.git
 cd feh || exit
 make
 sudo make install
 cd .. || exit
 rm -rf feh
+
+# Install polybar
+sudo dnf install -y
 
 # Wallpapers setup
 sudo rm -rf /usr/share/backgrounds/*

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+wallpaper=$(find /usr/share/backgrounds/ -type f | shuf -n 1)
+ln -sfv "$wallpaper" /usr/share/startup-wallpaper.jpg

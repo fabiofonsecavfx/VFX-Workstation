@@ -18,12 +18,3 @@ cp ~/.local/kitty.app/share/applications/kitty-open.desktop ~/.local/share/appli
 sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
 # Make xdg-terminal-exec (and hence desktop environments that support it use kitty)
 echo 'kitty.desktop' >~/.config/xdg-terminals.list
-
-# Change ugly kitty icon
-src_icon="$WS_IMGS_PATH/kitty-light.png"
-desktop_file_src="$HOME/.local/share/applications/kitty.desktop"
-
-sudo sed -i "s|^Icon=.*|Icon=${src_icon}|" "$desktop_file_src"
-
-ln -sfv "$WS_CONFIG_PATH/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
-ln -sfv "$WS_CONFIG_PATH/kitty/gruvbox-dark.conf" "$HOME/.config/kitty/gruvbox-dark.conf"

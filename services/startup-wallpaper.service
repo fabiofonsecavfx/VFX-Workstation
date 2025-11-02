@@ -1,0 +1,11 @@
+[Unit]
+Description="Set the startup wallpaper for LightDM and i3"
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/get-wallpaper.sh
+Type=onshot
+User=root
+
+[Install]
+WantedBy=default.target

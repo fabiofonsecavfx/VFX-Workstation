@@ -83,7 +83,7 @@ git clone https://github.com/davatorium/rofi.git
 cd rofi
 meson setup build --prefix=/usr -Dwayland=disabled
 ninja -C build
-ninja -C build install
+sudo ninja -C build install
 
 # Wallpapers setup
 sudo rm -rf /usr/share/backgrounds/*

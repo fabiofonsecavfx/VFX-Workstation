@@ -53,6 +53,13 @@ cd .. || exit
 rm -rf feh
 
 # Install polybar
+git clone --recursive https://github.com/polybar/polybar
+cd polybar
+mkdir build
+cd build
+cmake ..
+make -j"$(nproc)"
+sudo make install
 
 # Wallpapers setup
 sudo rm -rf /usr/share/backgrounds/*

@@ -24,7 +24,7 @@ sudo dnf install -y cmake ninja-build pkgconf-pkg-config git wget curl i3 \
   libEGL-devel libepoxy-devel meson pcre2-devel pixman-devel uthash-devel \
   xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel \
   xcb-util-devel check-devel pango-devel glib2-devel flex bison \
-  gdk-pixbuf2-devel libstartup-notification-devel
+  gdk-pixbuf2-devel
 
 # Install LightDM
 sudo dnf install -y --setopt=install_weak_deps=False lightdm lightdm-gtk-greeter

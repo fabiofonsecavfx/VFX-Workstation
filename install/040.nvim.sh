@@ -27,5 +27,5 @@ source "$HOME/.cargo/env"
 cargo install --locked tree-sitter-cli
 
 # Nodejs and MMDC
-sudo dnf module enable nodejs:20
+sudo dnf module enable -y nodejs:20
 sudo dnf install -y nodejs

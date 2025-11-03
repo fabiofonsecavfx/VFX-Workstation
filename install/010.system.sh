@@ -19,7 +19,7 @@ sudo dnf install -y cmake ninja-build pkgconf-pkg-config git wget curl i3 \
   python3-packaging cairo-devel libuv-devel xcb-util-devel libxcb-devel \
   xcb-proto xcb-util-image-devel xcb-util-wm-devel xcb-util-xrm-devel \
   xcb-util-cursor-devel alsa-lib-devel pulseaudio-libs-devel i3-devel \
-  jsoncpp-devel libmpdclient-devel libcurl-devel libnl3-devel
+  jsoncpp-devel libcurl-devel libnl3-devel
 
 # Install LightDM
 sudo dnf install -y --setopt=install_weak_deps=False lightdm lightdm-gtk-greeter

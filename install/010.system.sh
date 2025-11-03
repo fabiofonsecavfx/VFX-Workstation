@@ -22,7 +22,9 @@ sudo dnf install -y cmake ninja-build pkgconf-pkg-config git wget curl i3 \
   jsoncpp-devel libcurl-devel libnl3-devel mpd dbus-devel gcc git \
   libconfig-devel libev-devel libX11-devel libX11-xcb libxcb-devel libGL-devel \
   libEGL-devel libepoxy-devel meson pcre2-devel pixman-devel uthash-devel \
-  xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel xcb-util-devel
+  xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel \
+  xcb-util-devel check-devel pango-devel glib2-devel flex bison \
+  gdk-pixbuf2-devel libstartup-notification-devel
 
 # Install LightDM
 sudo dnf install -y --setopt=install_weak_deps=False lightdm lightdm-gtk-greeter
@@ -56,7 +58,6 @@ git clone https://github.com/derf/feh.git
 cd feh || exit
 make
 sudo make install
-cd .. || exit
 
 # Build polybar
 cd "$HOME/src" || exit
@@ -74,6 +75,15 @@ git clone https://github.com/yshui/picom.git
 cd picom
 meson setup --buildtype=release build
 ninja -C build
+ninja -C build install
+
+# Build rofi
+cd "$HOME/src" || exit
+git clone https://github.com/davatorium/rofi.git
+cd rofi
+meson setup build --prefix=/usr -Dwayland=disabled
+ninja -C build
+ninja -C build install
 
 # Wallpapers setup
 sudo rm -rf /usr/share/backgrounds/*

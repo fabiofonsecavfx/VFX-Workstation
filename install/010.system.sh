@@ -53,7 +53,6 @@ cd .. || exit
 rm -rf feh
 
 # Install polybar
-sudo dnf install -y
 
 # Wallpapers setup
 sudo rm -rf /usr/share/backgrounds/*

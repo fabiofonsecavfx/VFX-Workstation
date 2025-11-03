@@ -75,7 +75,7 @@ git clone https://github.com/yshui/picom.git
 cd picom
 meson setup --buildtype=release build
 ninja -C build
-ninja -C build install
+sudo ninja -C build install
 
 # Build rofi
 cd "$HOME/src" || exit

@@ -19,7 +19,10 @@ sudo dnf install -y cmake ninja-build pkgconf-pkg-config git wget curl i3 \
   python3-packaging cairo-devel libuv-devel xcb-util-devel libxcb-devel \
   xcb-proto xcb-util-image-devel xcb-util-wm-devel xcb-util-xrm-devel \
   xcb-util-cursor-devel alsa-lib-devel pulseaudio-libs-devel i3-devel \
-  jsoncpp-devel libcurl-devel libnl3-devel mpd
+  jsoncpp-devel libcurl-devel libnl3-devel mpd dbus-devel gcc git \
+  libconfig-devel libev-devel libX11-devel libX11-xcb libxcb-devel libGL-devel \
+  libEGL-devel libepoxy-devel meson pcre2-devel pixman-devel uthash-devel \
+  xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel xcb-util-devel
 
 # Install LightDM
 sudo dnf install -y --setopt=install_weak_deps=False lightdm lightdm-gtk-greeter
@@ -47,7 +50,7 @@ fc-cache -fv
 # Build from source
 mkdir -p "$HOME/src"
 
-# Install feh
+# Build feh
 cd "$HOME/src" || exit
 git clone https://github.com/derf/feh.git
 cd feh || exit
@@ -55,7 +58,7 @@ make
 sudo make install
 cd .. || exit
 
-# Install polybar
+# Build polybar
 cd "$HOME/src" || exit
 git clone --recursive https://github.com/polybar/polybar
 cd polybar
@@ -64,6 +67,13 @@ cd build
 cmake ..
 make -j"$(nproc)"
 sudo make install
+
+# Build picom
+cd "$HOME/src" || exit
+git clone https://github.com/yshui/picom.git
+cd picom
+meson setup --buildtype=release build
+ninja -C build
 
 # Wallpapers setup
 sudo rm -rf /usr/share/backgrounds/*

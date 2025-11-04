@@ -4,7 +4,7 @@ set -e
 
 # dunst dependencies
 sudo dnf install gcc make libX11-devel libXinerama-devel \
-  libXrandr-devel libXss-devel glib2-devel pango-devel \
+  libXrandr-devel glib2-devel pango-devel \
   cairo-devel libnotify-devel dbus-devel
 
 # Build dunst

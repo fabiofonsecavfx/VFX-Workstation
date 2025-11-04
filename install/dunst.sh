@@ -3,7 +3,7 @@
 set -e
 
 # dunst dependencies
-sudo dnf install gcc make libX11-devel libXinerama-devel \
+sudo dnf install -y gcc make libX11-devel libXinerama-devel \
   libXrandr-devel glib2-devel pango-devel \
   cairo-devel libnotify-devel dbus-devel
 

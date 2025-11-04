@@ -13,6 +13,8 @@ sudo dnf install -y meson ninja-build autoconf automake gcc gcc-c++ make \
 cd "$WS_SOURCE_PATH" || exit
 git clone https://github.com/davatorium/rofi.git
 cd rofi || exit
+git fetch --deltas
+git checkout 1.7.5
 meson setup build --prefix=/usr -Dwayland=disabled
 ninja -C build
 sudo ninja -C build install

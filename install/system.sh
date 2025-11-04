@@ -16,7 +16,7 @@ sudo dnf groupinstall -y --with-optional \
 # Install Packages
 sudo dnf install -y perl-AnyEvent perl-AnyEvent-I3 perl-JSON-XS libXScrnSaver \
   libXpm libappindicator i3 i3lock i3status i3-devel network-manager-applet \
-  pulseaudio-utils pavucontrol htop
+  pulseaudio-utils pavucontrol htop xclip
 
 # Setup services and scripts
 sudo cp -v "$WS_SCRIPTS_PATH"/* /usr/local/bin

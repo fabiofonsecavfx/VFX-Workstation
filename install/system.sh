@@ -33,7 +33,3 @@ mkdir -p "$font_dir"
 # AdwaitaMono Nerd Font
 tar -xvf "$WS_ASSETS_PATH/AdwaitaMono.tar.gz" -C "$font_dir"
 fc-cache -fv
-
-# Wallpapers setup
-sudo rm -rf /usr/share/backgrounds/*
-sudo tar -xvf "$WS_ASSETS_PATH"/backgrounds.tar.gz -C /usr/share/backgrounds/

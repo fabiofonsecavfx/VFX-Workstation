@@ -9,3 +9,7 @@ ln -sfv "$WS_CONFIG_PATH"/lightdm/.profile "$HOME"/.profile
 
 # Set UI on startup
 sudo systemctl set-default graphical.target
+
+# Wallpapers setup
+sudo rm -rf /usr/share/backgrounds/*
+sudo tar -xvf "$WS_ASSETS_PATH"/backgrounds.tar.gz -C /usr/share/backgrounds/

@@ -1,8 +1,10 @@
 #!/bin/bash
 
+set -e
+
 # feh dependencies
-sudo dnf install -y imlib2 imlib2-devel libX11-devel libXinerama-devel \
-  libXext-devel libcurl-devel libXt-devel
+sudo dnf install -y gcc make imlib2-devel libXinerama-devel libcurl-devel \
+  libpng-devel libX11-devel libXt-devel
 
 # Build feh
 cd "$WS_SOURCE_PATH" || exit

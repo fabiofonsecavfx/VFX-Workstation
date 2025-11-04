@@ -14,8 +14,9 @@ sudo dnf groupinstall -y --with-optional \
   "Multimedia"
 
 # Install Packages
-sudo dnf install -y make cmake ninja-build pkgconf-pkg-config git wget curl i3 \
-  gnome-themes-extra clang gcc-c++ mpd dbus-devel gcc git meson
+sudo dnf install -y perl-AnyEvent perl-AnyEvent-I3 perl-JSON-XS libXScrnSaver \
+  libXpm libappindicator i3 i3lock i3status network-manager-applet pulseaudio-utils \
+  pavucontrol htop
 
 # Setup services and scripts
 sudo cp -v "$WS_SCRIPTS_PATH"/* /usr/local/bin

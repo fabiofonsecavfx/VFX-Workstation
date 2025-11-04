@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # rofi dependencies
 sudo dnf install -y meson ninja-build autoconf automake gcc gcc-c++ make \
   pango-devel startup-notification-devel xcb-util-wm-devel xcb-util-devel \

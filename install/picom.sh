@@ -1,10 +1,12 @@
 #!/bin/bash
 
+set -e
+
 # picom dependencies
-sudo dnf install -y libconfig-devel libev-devel libX11-devel libX11-xcb \
-  libxcb-devel libGL-devel libEGL-devel libepoxy-devel pcre2-devel \
-  pixman-devel uthash-devel xcb-util-image-devel xcb-util-renderutil-devel \
-  xorg-x11-proto-devel xcb-util-devel
+sudo dnf install -y meson ninja-build gcc libX11-devel libXext-devel \
+  libxcb-devel xcb-util-renderutil-devel xcb-util-image-devel \
+  libconfig-devel libev-devel uthash-devel pixman-devel dbus-devel \
+  libGL-devel pcre2-devel
 
 # Build picom
 cd "$WS_SOURCE_PATH" || exit

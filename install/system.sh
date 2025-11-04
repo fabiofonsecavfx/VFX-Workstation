@@ -37,11 +37,3 @@ fc-cache -fv
 # Wallpapers setup
 sudo rm -rf /usr/share/backgrounds/*
 sudo tar -xvf "$WS_ASSETS_PATH"/backgrounds.tar.gz -C /usr/share/backgrounds/
-
-# Build rofi
-cd "$HOME/src" || exit
-git clone https://github.com/davatorium/rofi.git
-cd rofi
-meson setup build --prefix=/usr -Dwayland=disabled
-ninja -C build
-sudo ninja -C build install

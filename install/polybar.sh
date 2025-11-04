@@ -6,8 +6,8 @@ set -e
 sudo dnf install -y cmake gcc gcc-c++ make python3 python3-sphinx \
   cairo-devel xcb-proto xcb-util-devel xcb-util-image-devel \
   xcb-util-wm-devel xcb-util-xrm-devel xcb-util-cursor-devel \
-  alsa-lib-devel pulseaudio-libs-devel libnl3-devel libmpdclient-devel \
-  jsoncpp-devel libcurl-devel wireless-tools-devel
+  alsa-lib-devel pulseaudio-libs-devel libnl3-devel iw libnl3-devel \
+  jsoncpp-devel libcurl-devel libuv-devel i3-devel
 
 # Build polybar
 cd "$WS_SOURCE_PATH" || exit

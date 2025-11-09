@@ -30,7 +30,8 @@ colors = {
     "blue_bright": "#83a598",  # bright blue
     "purple_bright": "#d3869b",# bright purple
     "aqua_bright": "#8ec07c",  # bright aqua
-    "white": "#ffffff"
+    "white": "#ffffff",
+    "gray_neutral": "#7f7f7f"
 }
 
 keys = [
@@ -181,7 +182,7 @@ screens = [
                 ),
                 widget.GroupBox(
                     active=colors["fg"],
-                    inactive=colors["gray"],
+                    inactive=colors["gray_neutral"],
                     highlight_method="text",
                     this_current_screen_border=colors["orange"],
                     this_screen_border=colors["orange"],
@@ -190,10 +191,9 @@ screens = [
                     urgent_border=colors["red"],
                     urgent_text=colors["red"],
                     font="AdwaitaMono Nerd Font",
-                    # Use dots instead of numbers
                     use_mouse_wheel=False,
-                    padding_x=8,
-                    padding_y=8,
+                    padding_x=4,
+                    padding_y=4,
                     fmt="●",
                     disable_drag=True,
                 ),

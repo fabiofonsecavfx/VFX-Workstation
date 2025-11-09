@@ -183,7 +183,7 @@ screens = [
                 ),
                 widget.TaskList(
                     foreground=colors["light_1"],
-                    border=colors["orange"],
+                    border=colors["dark_1"],
                     urgent_border=colors["red"],
                     highlight_method="border",
                     icon_size=24,
@@ -191,13 +191,13 @@ screens = [
                     padding_y=4,
                     margin_x=3,
                     margin_y=3,
-                    font="AdwaitaSans Bold",
+                    font="AdwaitaSans",
                     txt_floating="🗗 ",
                     txt_maximized="🗖 ",
                     txt_minimized="🗕 ",
                     rounded=True,
                     urgent_alert_method="border",
-                    max_title_width=20000,
+                    stretch=True
                 ),
                 widget.Chord(
                     chords_colors={

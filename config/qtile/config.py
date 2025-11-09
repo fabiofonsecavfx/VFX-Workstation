@@ -167,7 +167,7 @@ screens = [
                 ),
                 widget.GroupBox(
                     active=colors["light_1"],
-                    inactive=colors["dark_1"],
+                    inactive=colors["dark_2"],
                     highlight_method="text",
                     this_current_screen_border=colors["orange"],
                     this_screen_border=colors["orange"],
@@ -187,8 +187,7 @@ screens = [
                     urgent_border=colors["red"],
                     borderwidth=2,
                     highlight_method="block",
-                    icon_size=20,
-                    fontsize=16,
+                    icon_size=24,
                     font="AdwaitaSans Bold",
                     padding_x=8,
                     padding_y=4,
@@ -199,6 +198,7 @@ screens = [
                     txt_minimized="🗕 ",
                     rounded=True,
                     urgent_alert_method="border",
+                    stretch=True,
                 ),
                 widget.Chord(
                     chords_colors={

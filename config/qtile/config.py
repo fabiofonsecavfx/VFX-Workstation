@@ -162,7 +162,7 @@ layouts = [
 ]
 widget_defaults = dict(
     font="AdwaitaMono Nerd Font",
-    fontsize=16,
+    fontsize=24,
     padding=8,
 )
 extension_defaults = widget_defaults.copy()
@@ -172,15 +172,31 @@ screens = [
         bottom=bar.Bar(
             [
                 widget.TextBox(
-                    text="⏻",
-                    fontsize=18,
+                    text=" ",
                     foreground=colors["white"],
                     mouse_callbacks={
                         "Button1": lazy.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu")
                     },
                     padding=10,
                 ),
-                widget.GroupBox(),
+                widget.GroupBox(
+                    active=colors["fg"],
+                    inactive=colors["gray"],
+                    highlight_method="text",
+                    this_current_screen_border=colors["orange"],
+                    this_screen_border=colors["orange"],
+                    other_current_screen_border=colors["orange"],
+                    other_screen_border=colors["orange"],
+                    urgent_border=colors["red"],
+                    urgent_text=colors["red"],
+                    font="AdwaitaMono Nerd Font",
+                    # Use dots instead of numbers
+                    use_mouse_wheel=False,
+                    padding_x=8,
+                    padding_y=8,
+                    fmt="●",
+                    disable_drag=True,
+                ),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(

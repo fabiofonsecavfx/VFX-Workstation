@@ -15,7 +15,8 @@ sudo dnf groupinstall -y --with-optional \
 
 # Install Packages
 sudo dnf install -y libXScrnSaver libXpm libappindicator network-manager-applet \
-  pulseaudio-utils pavucontrol htop xclip thunar python3.11 python3.11-pip
+  pulseaudio-utils pavucontrol htop xclip thunar python3.11 python3.11-pip \
+  gnome-themes-extra papirus-icon-theme
 
 # Setup services and scripts
 sudo cp -v "$WS_SCRIPTS_PATH"/* /usr/local/bin
@@ -40,3 +41,6 @@ fc-cache -fv
 # Install Icons
 sudo mkdir -p /usr/local/share/icons
 sudo cp -fv "$WS_ASSETS_PATH"/icons/* /usr/local/share/icons/
+
+# Xresources
+ln -sfv "$WS_CONFIG_PATH/config/x11/.Xresources" "$HOME/.Xresources

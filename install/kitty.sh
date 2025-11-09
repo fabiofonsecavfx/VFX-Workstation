@@ -23,4 +23,4 @@ echo 'kitty.desktop' >~/.config/xdg-terminals.list
 # Symbolic links
 ln -sfv "$WS_CONFIG_PATH/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 ln -sfv "$WS_CONFIG_PATH/kitty/gruvbox-dark.conf" "$HOME/.config/kitty/gruvbox-dark.conf"
-ln -sfv "$WS_CONFIG_PATH/kitty/gruvbox-dark.conf" "$HOME/.config/kitty/keymaps.conf"
+ln -sfv "$WS_CONFIG_PATH/kitty/keymaps.conf" "$HOME/.config/kitty/keymaps.conf"

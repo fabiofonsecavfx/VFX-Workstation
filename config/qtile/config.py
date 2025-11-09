@@ -185,7 +185,6 @@ screens = [
                     foreground=colors["light_1"],
                     border=colors["orange"],
                     urgent_border=colors["red"],
-                    borderwidth=2,
                     highlight_method="border",
                     icon_size=24,
                     font="AdwaitaSans Bold",

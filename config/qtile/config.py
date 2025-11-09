@@ -197,7 +197,6 @@ screens = [
                     txt_floating="🗗 ",
                     txt_maximized="🗖 ",
                     txt_minimized="🗕 ",
-                    max_title_width=200,
                     rounded=True,
                     urgent_alert_method="border",
                 ),

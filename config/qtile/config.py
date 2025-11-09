@@ -167,7 +167,7 @@ screens = [
                 ),
                 widget.GroupBox(
                     active=colors["dark_2"],
-                    inactive=colors["dark_1"],
+                    inactive=colors["light_2"],
                     highlight_method="text",
                     this_current_screen_border=colors["orange"],
                     this_screen_border=colors["orange"],

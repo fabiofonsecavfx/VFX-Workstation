@@ -166,7 +166,7 @@ screens = [
                     padding=10,
                 ),
                 widget.GroupBox(
-                    active=colors["light_2"],
+                    active=colors["light_1"],
                     inactive=colors["dark_1"],
                     highlight_method="text",
                     this_current_screen_border=colors["orange"],
@@ -181,11 +181,25 @@ screens = [
                     fmt="●",
                     disable_drag=True,
                 ),
-                widget.WindowName(
+                widget.TaskList(
                     foreground=colors["light_1"],
+                    border=colors["orange"],
+                    urgent_border=colors["red"],
+                    borderwidth=2,
+                    highlight_method="block",
+                    icon_size=20,
+                    fontsize=16,
                     font="AdwaitaSans Bold",
-                    format="{state}{name}",
-                    parse_text=lambda text: f"  {text}",
+                    padding_x=8,
+                    padding_y=4,
+                    margin_x=3,
+                    margin_y=3,
+                    txt_floating="🗗 ",
+                    txt_maximized="🗖 ",
+                    txt_minimized="🗕 ",
+                    max_title_width=200,
+                    rounded=True,
+                    urgent_alert_method="border",
                 ),
                 widget.Chord(
                     chords_colors={

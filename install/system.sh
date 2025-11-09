@@ -39,4 +39,4 @@ fc-cache -fv
 
 # Install Icons
 sudo mkdir -p /usr/local/share/icons
-cp -fv "$WS_ASSETS_PATH"/icons/* /usr/local/share/icons/
+sudo cp -fv "$WS_ASSETS_PATH"/icons/* /usr/local/share/icons/

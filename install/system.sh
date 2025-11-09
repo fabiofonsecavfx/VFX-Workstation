@@ -43,4 +43,4 @@ sudo mkdir -p /usr/local/share/icons
 sudo cp -fv "$WS_ASSETS_PATH"/icons/* /usr/local/share/icons/
 
 # Xresources
-ln -sfv "$WS_CONFIG_PATH/config/x11/.Xresources" "$HOME/.Xresources
+ln -sfv "$WS_CONFIG_PATH/config/x11/.Xresources" "$HOME/.Xresources"

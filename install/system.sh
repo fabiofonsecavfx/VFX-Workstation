@@ -14,9 +14,8 @@ sudo dnf groupinstall -y --with-optional \
   "Multimedia"
 
 # Install Packages
-sudo dnf install -y perl-AnyEvent perl-AnyEvent-I3 perl-JSON-XS libXScrnSaver \
-  libXpm libappindicator i3 i3lock i3status i3-devel network-manager-applet \
-  pulseaudio-utils pavucontrol htop xclip thunar python3-pip
+sudo dnf install -y libXScrnSaver libXpm libappindicator network-manager-applet \
+  pulseaudio-utils pavucontrol htop xclip thunar python3.11 python3.11-pip
 
 # Setup services and scripts
 sudo cp -v "$WS_SCRIPTS_PATH"/* /usr/local/bin
@@ -33,7 +32,11 @@ font_dir="$HOME/.local/share/fonts"
 mkdir -p "$font_dir"
 # AdwaitaMono Nerd Font
 tar -xvf "$WS_ASSETS_PATH/AdwaitaMono.tar.gz" -C "$font_dir"
+# AdwaitaSans
+cp -vf "$WS_ASSETS_PATH/AdwaitaSans-Regular.ttf" "$font_dir"
+
 fc-cache -fv
 
-# Install i3 autotiling
-pip3 install --user autotiling
+# Install Icons
+sudo mkdir -p /usr/local/share/icons
+cp -fv "$WS_ASSETS_PATH"/icons/* /usr/local/share/icons/

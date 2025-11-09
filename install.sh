@@ -21,7 +21,7 @@ export WS_ROOT_PATH WS_INSTALL_PATH WS_CONFIG_PATH WS_UTILS_PATH WS_ASSETS_PATH 
   WS_SERVICES_PATH WS_SCRIPTS_PATH WS_SOURCE_PATH
 
 # All scripts
-all=(extra-repos system shell lightdm dunst feh polybar picom rofi kitty nvim vivaldi)
+all=(extra-repos system shell lightdm dunst feh picom rofi kitty nvim vivaldi qtile)
 
 # Parse arguments
 if [ "$#" == 0 ]; then

@@ -12,6 +12,7 @@ mkdir -p "$HOME/.local/share/applications"
 ln -sfv ~/.local/kitty.app/bin/kitty ~/.local/kitty.app/bin/kitten ~/.local/bin/
 # Place the kitty.desktop file somewhere it can be found by the OS
 cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
+sed -i 's|^Icon=.*|Icon=/usr/local/share/icons/kitty-light.png|' "$HOME/.local/share/applications/kitty.desktop"
 # If you want to open text files and images in kitty via your file manager also add the kitty-open.desktop file
 cp ~/.local/kitty.app/share/applications/kitty-open.desktop ~/.local/share/applications/
 # Update the paths to the kitty and its icon in the kitty desktop file(s)
@@ -19,11 +20,7 @@ sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.loca
 # Make xdg-terminal-exec (and hence desktop environments that support it use kitty)
 echo 'kitty.desktop' >~/.config/xdg-terminals.list
 
-# Change kitty icon
-src_icon="$WS_ASSETS_PATH/icons/kitty-light.png"
-desktop_file_src="$HOME/.local/share/applications/kitty.desktop"
-
-sudo sed -i "s|^Icon=.*|Icon=${src_icon}|" "$desktop_file_src"
-
+# Symbolic links
 ln -sfv "$WS_CONFIG_PATH/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 ln -sfv "$WS_CONFIG_PATH/kitty/gruvbox-dark.conf" "$HOME/.config/kitty/gruvbox-dark.conf"
+ln -sfv "$WS_CONFIG_PATH/kitty/gruvbox-dark.conf" "$HOME/.config/kitty/keymaps.conf"

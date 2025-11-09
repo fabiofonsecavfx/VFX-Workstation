@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Qtile
+Comment=Qtile Session
+Exec=qtile start
+Icon=/usr/local/share/icons/qtile.png
+Type=Application
+Keywords=wm;tiling

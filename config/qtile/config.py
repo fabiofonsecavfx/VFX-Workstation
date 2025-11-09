@@ -147,7 +147,7 @@ layouts = [
     # layout.Stack(num_stacks=2),
     layout.Bsp(
         border_focus=colors["orange"],
-        border_normal=colors["bg"]
+        border_normal=colors["bg1"]
     ),
     # layout.Matrix(),
     # layout.MonadTall(),

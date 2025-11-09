@@ -166,7 +166,7 @@ screens = [
                     padding=10,
                 ),
                 widget.GroupBox(
-                    active=colors["light_1"],
+                    active=colors["light_2"],
                     inactive=colors["dark_1"],
                     highlight_method="text",
                     this_current_screen_border=colors["orange"],
@@ -175,15 +175,16 @@ screens = [
                     other_screen_border=colors["orange"],
                     urgent_border=colors["red"],
                     urgent_text=colors["red"],
-                    font="AdwaitaMono Nerd Font",
                     use_mouse_wheel=False,
                     padding_x=2,
                     padding_y=2,
                     fmt="●",
                     disable_drag=True,
                 ),
-                widget.Prompt(),
-                widget.WindowName(),
+                widget.WindowName(
+                    foreground=colors["light_1"],
+                    font="AdwaitaSans"
+                ),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),

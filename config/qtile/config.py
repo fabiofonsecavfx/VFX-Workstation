@@ -197,7 +197,7 @@ screens = [
                     txt_minimized="🗕 ",
                     rounded=True,
                     urgent_alert_method="border",
-                    stretch=True,
+                    max_title_width=20000,
                 ),
                 widget.Chord(
                     chords_colors={

@@ -9,29 +9,14 @@ file_manager = "thunar"
 
 
 colors = {
-    "bg": "#282828",           # background
-    "bg0_h": "#1d2021",        # background hard
-    "bg1": "#3c3836",          # background 1
-    "bg2": "#504945",          # background 2
-    "bg3": "#665c54",          # background 3
-    "fg": "#ebdbb2",           # foreground
-    "fg0": "#fbf1c7",          # foreground 0
-    "red": "#cc241d",          # red
-    "green": "#98971a",        # green
-    "yellow": "#d79921",       # yellow
-    "blue": "#458588",         # blue
-    "purple": "#b16286",       # purple
-    "aqua": "#689d6a",         # aqua
-    "gray": "#a89984",         # gray
-    "orange": "#d65d0e",       # orange
-    "red_bright": "#fb4934",   # bright red
-    "green_bright": "#b8bb26", # bright green
-    "yellow_bright": "#fabd2f",# bright yellow
-    "blue_bright": "#83a598",  # bright blue
-    "purple_bright": "#d3869b",# bright purple
-    "aqua_bright": "#8ec07c",  # bright aqua
+    "black": "#000000",
     "white": "#ffffff",
-    "gray_neutral": "#363636"
+    "dark_1": "#262626",
+    "dark_2": "#666666",
+    "light_1": "#d6d6d6",
+    "light_2": "#a1a1a1",
+    "red": "#e01b24",
+    "orange": "#ff7800"
 }
 
 keys = [
@@ -150,7 +135,7 @@ layouts = [
     # layout.Stack(num_stacks=2),
     layout.Bsp(
         border_focus=colors["orange"],
-        border_normal=colors["bg"]
+        border_normal=colors["black"]
     ),
     # layout.Matrix(),
     # layout.MonadTall(),
@@ -174,15 +159,15 @@ screens = [
             [
                 widget.TextBox(
                     text=" ",
-                    foreground=colors["fg"],
+                    foreground=colors["light_1"],
                     mouse_callbacks={
                         "Button1": lazy.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu")
                     },
                     padding=10,
                 ),
                 widget.GroupBox(
-                    active=colors["fg"],
-                    inactive=colors["gray_neutral"],
+                    active=colors["dark_2"],
+                    inactive=colors["dark_1"],
                     highlight_method="text",
                     this_current_screen_border=colors["orange"],
                     this_screen_border=colors["orange"],
@@ -257,7 +242,7 @@ floating_layout = layout.Floating(
         Match(role="pop-up"),  # GPG key password entry
     ],
     border_focus=colors["orange"],
-    border_normal=colors["bg"],
+    border_normal=colors["black"],
     border_width=3,
 )
 auto_fullscreen = True

@@ -145,7 +145,10 @@ layouts = [
     #layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
-    layout.Bsp(),
+    layout.Bsp(
+        border_focus=colors["orange"],
+        border_normal=colors["bg2"]
+    ),
     # layout.Matrix(),
     # layout.MonadTall(),
     # layout.MonadWide(),

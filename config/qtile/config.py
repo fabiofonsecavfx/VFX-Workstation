@@ -231,7 +231,7 @@ floating_layout = layout.Floating(
         Match(title="pinentry"),  # GPG key password entry
         Match(role="pop-up"),  # GPG key password entry
     ],
-    border_focus=colors["blue"],
+    border_focus=colors["orange"],
     border_normal=colors["bg"],
     border_width=2,
 )

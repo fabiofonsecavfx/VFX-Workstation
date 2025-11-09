@@ -139,6 +139,7 @@ for i in groups:
             ),
         ]
     )
+    
 
 layouts = [
     #layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=2),
@@ -229,7 +230,9 @@ floating_layout = layout.Floating(
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
         Match(role="pop-up"),  # GPG key password entry
-    ]
+    ],
+    border_focus=colors["blue"],
+    border_normal=colors["bg"],
 )
 auto_fullscreen = True
 focus_on_window_activation = "smart"

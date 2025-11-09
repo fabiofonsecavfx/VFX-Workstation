@@ -30,6 +30,7 @@ colors = {
     "blue_bright": "#83a598",  # bright blue
     "purple_bright": "#d3869b",# bright purple
     "aqua_bright": "#8ec07c",  # bright aqua
+    "white": "#ffffff"
 }
 
 keys = [
@@ -170,7 +171,15 @@ screens = [
     Screen(
         bottom=bar.Bar(
             [
-                widget.CurrentLayout(),
+                widget.TextBox(
+                    text="⏻",
+                    fontsize=18,
+                    foreground=colors["white"],
+                    mouse_callbacks={
+                        "Button1": lazy.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu")
+                    },
+                    padding=10,
+                ),
                 widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowName(),

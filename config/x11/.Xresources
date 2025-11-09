@@ -6,7 +6,7 @@
 ! ----------------------------------------
 ! DPI and Scaling for 4K Monitor
 ! ----------------------------------------
-Xft.dpi: 144
+Xft.dpi: 192
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintfull
@@ -32,7 +32,7 @@ Xcursor.size: 32
 ! Rofi Configuration
 ! ----------------------------------------
 rofi.font: AdwaitaSans 11
-rofi.dpi: 144
+rofi.dpi: 192
 
 ! Rofi - Display Settings
 rofi.show-icons: true

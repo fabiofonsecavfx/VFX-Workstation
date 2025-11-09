@@ -10,5 +10,5 @@ python3.11 -m pip install qtile
 
 # Create config syslink
 mkdir -p "$HOME/.config/qtile"
-ln -sf "$WS_CONFIG_PATH/qtile/config.py" "$HOME/.config/qtile/config.py"
+ln -sfv "$WS_CONFIG_PATH/qtile/config.py" "$HOME/.config/qtile/config.py"
 sudo cp "$WS_CONFIG_PATH/qtile/qtile.desktop" /usr/share/xsessions/

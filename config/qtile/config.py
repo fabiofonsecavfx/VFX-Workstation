@@ -5,7 +5,32 @@ from libqtile.utils import guess_terminal
 
 mod = "mod4"
 terminal = "kitty"
-file_manager = "doublecmd"
+file_manager = "thunar"
+
+
+colors = {
+    "bg": "#282828",           # background
+    "bg0_h": "#1d2021",        # background hard
+    "bg1": "#3c3836",          # background 1
+    "bg2": "#504945",          # background 2
+    "bg3": "#665c54",          # background 3
+    "fg": "#ebdbb2",           # foreground
+    "fg0": "#fbf1c7",          # foreground 0
+    "red": "#cc241d",          # red
+    "green": "#98971a",        # green
+    "yellow": "#d79921",       # yellow
+    "blue": "#458588",         # blue
+    "purple": "#b16286",       # purple
+    "aqua": "#689d6a",         # aqua
+    "gray": "#a89984",         # gray
+    "orange": "#d65d0e",       # orange
+    "red_bright": "#fb4934",   # bright red
+    "green_bright": "#b8bb26", # bright green
+    "yellow_bright": "#fabd2f",# bright yellow
+    "blue_bright": "#83a598",  # bright blue
+    "purple_bright": "#d3869b",# bright purple
+    "aqua_bright": "#8ec07c",  # bright aqua
+}
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -116,12 +141,12 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=2),
-    layout.Max(),
+    #layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=2),
+    #layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
-    # layout.Matrix(),
+    layout.Matrix(),
     # layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),

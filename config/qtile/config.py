@@ -11,7 +11,7 @@ file_manager = "thunar"
 colors = {
     "black": "#000000",
     "white": "#ffffff",
-    "dark_1": "#262626",
+    "dark_1": "#333333",
     "dark_2": "#666666",
     "light_1": "#d6d6d6",
     "light_2": "#a1a1a1",

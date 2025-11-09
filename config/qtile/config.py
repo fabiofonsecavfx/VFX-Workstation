@@ -233,7 +233,7 @@ floating_layout = layout.Floating(
     ],
     border_focus=colors["orange"],
     border_normal=colors["bg"],
-    border_width=2,
+    border_width=4,
 )
 auto_fullscreen = True
 focus_on_window_activation = "smart"

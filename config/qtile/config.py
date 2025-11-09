@@ -183,7 +183,7 @@ screens = [
                 ),
                 widget.WindowName(
                     foreground=colors["light_1"],
-                    font="AdwaitaSans",
+                    font="AdwaitaSans Bold",
                     format="{state}{name}",
                     parse_text=lambda text: f"  {text}",
                 ),

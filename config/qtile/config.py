@@ -161,9 +161,9 @@ layouts = [
     # layout.Zoomy(),
 ]
 widget_defaults = dict(
-    font="sans",
-    fontsize=12,
-    padding=3,
+    font="AdwaitaMono Nerd Font",
+    fontsize=16,
+    padding=8,
 )
 extension_defaults = widget_defaults.copy()
 

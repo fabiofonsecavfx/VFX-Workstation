@@ -31,7 +31,7 @@ colors = {
     "purple_bright": "#d3869b",# bright purple
     "aqua_bright": "#8ec07c",  # bright aqua
     "white": "#ffffff",
-    "gray_neutral": "#7f7f7f"
+    "gray_neutral": "#363636"
 }
 
 keys = [
@@ -174,14 +174,14 @@ screens = [
             [
                 widget.TextBox(
                     text=" ",
-                    foreground=colors["white"],
+                    foreground=colors["fg"],
                     mouse_callbacks={
                         "Button1": lazy.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu")
                     },
                     padding=10,
                 ),
                 widget.GroupBox(
-                    active=colors["white"],
+                    active=colors["fg"],
                     inactive=colors["gray_neutral"],
                     highlight_method="text",
                     this_current_screen_border=colors["orange"],

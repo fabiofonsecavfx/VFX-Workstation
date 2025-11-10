@@ -166,7 +166,7 @@ screens = [
                     padding=10,
                 ),
                 widget.GroupBox(
-                    active=colors["light_1"],
+                    active=colors["white"],
                     inactive=colors["dark_2"],
                     highlight_method="text",
                     this_current_screen_border=colors["orange"],
@@ -183,23 +183,23 @@ screens = [
                 ),
                 widget.TaskList(
                     foreground=colors["light_1"],
-                    border=colors["dark_1"],
+                    border=colors["black"],
                     urgent_border=colors["red"],
                     highlight_method="border",
-                    borderwidth=3,
+                    borderwidth=2,
                     icon_size=24,
                     padding_x=8,
                     padding_y=4,
                     margin_x=3,
                     margin_y=3,
                     font="AdwaitaSans",
-                    txt_floating="🗗 ",
-                    txt_maximized="🗖 ",
-                    txt_minimized="🗕 ",
+                    txt_floating=" ",
+                    txt_maximized=" ",
+                    txt_minimized=" ",
                     rounded=True,
                     urgent_alert_method="border",
                     markup_focused='<span foreground="{}">{{}}</span>'.format(colors["light_1"]),
-                    markup_normal='<span foreground="{}">{{}}</span>'.format(colors["dark_1"]),
+                    markup_normal='<span foreground="{}">{{}}</span>'.format(colors["dark_2"]),
                 ),
                 widget.Chord(
                     chords_colors={
@@ -215,7 +215,7 @@ screens = [
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 widget.QuickExit(),
             ],
-            36,
+            42,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),

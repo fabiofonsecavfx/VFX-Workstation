@@ -157,7 +157,9 @@ screens = [
     Screen(
         bottom=bar.Bar(
             [
+                # Power button
                 widget.TextBox(
+                    fontsize=24,
                     text=" ",
                     foreground=colors["light_1"],
                     mouse_callbacks={
@@ -165,7 +167,9 @@ screens = [
                     },
                     padding=10,
                 ),
+                # Workspace dots
                 widget.GroupBox(
+                    fontsize=24,
                     active=colors["white"],
                     inactive=colors["dark_2"],
                     highlight_method="text",
@@ -181,7 +185,9 @@ screens = [
                     fmt="●",
                     disable_drag=True,
                 ),
+                # TaskList
                 widget.TaskList(
+                    fontsize=24,
                     foreground=colors["light_1"],
                     border=colors["black"],
                     urgent_border=colors["red"],
@@ -201,23 +207,73 @@ screens = [
                     markup_focused='<span foreground="{}">{{}}</span>'.format(colors["light_1"]),
                     markup_normal='<span foreground="{}">{{}}</span>'.format(colors["dark_2"]),
                 ),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
+                # Right side widgets
+                widget.Spacer(),
+                # Network - WiFi
+                widget.Wlan(
+                    fontsize=24,
+                    interface="wlan0",  # Change to your wireless interface (use 'ip link' to find it)
+                    format=" {essid} {percent:2.0%}",
+                    foreground=colors["light_1"],
+                    disconnected_message=" Disconnected",
+                    mouse_callbacks={
+                        'Button1': lazy.spawn("nm-connection-editor")
                     },
-                    name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
-                widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
+                # Network - Ethernet
+                widget.TextBox(
+                    text="",
+                    foreground=colors["light_1"],
+                    fontsize=24,
+                    mouse_callbacks={
+                        'Button1': lazy.spawn("nm-connection-editor")
+                    },
+                ),
+                # Bluetooth
+                widget.TextBox(
+                    text="",
+                    foreground=colors["light_1"],
+                    fontsize=18,
+                    mouse_callbacks={
+                        'Button1': lazy.spawn("blueman-manager")
+                    },
+                ),
+                # Volume
+                widget.TextBox(
+                    text="",
+                    foreground=colors["light_1"],
+                    fontsize=18,
+                ),
+                widget.Volume(
+                    foreground=colors["light_1"],
+                    fmt="{}",
+                    fontsize=16,
+                    mouse_callbacks={
+                        'Button1': lazy.spawn("pavucontrol")
+                    },
+                ),
+                # Battery
+                widget.Battery(
+                    format="{char} {percent:2.0%}",
+                    charge_char="",
+                    discharge_char="",
+                    full_char="",
+                    empty_char="",
+                    unknown_char="",
+                    foreground=colors["light_1"],
+                    low_foreground=colors["red"],
+                    low_percentage=0.2,
+                    fontsize=16,
+                    show_short_text=False,
+                ),
+                # Clock
+                widget.Clock(
+                    format="%b %-d %-I:%M %p",
+                    foreground=colors["light_1"],
+                    fontsize=16,
+                ),
             ],
             42,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling

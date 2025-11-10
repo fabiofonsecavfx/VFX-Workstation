@@ -186,6 +186,7 @@ screens = [
                     border=colors["dark_1"],
                     urgent_border=colors["red"],
                     highlight_method="border",
+                    borderwidth=3,
                     icon_size=24,
                     padding_x=8,
                     padding_y=4,
@@ -197,6 +198,8 @@ screens = [
                     txt_minimized="🗕 ",
                     rounded=True,
                     urgent_alert_method="border",
+                    markup_focused='<span foreground="{}">{{}}</span>'.format(colors["light_1"]),
+                    markup_normal='<span foreground="{}">{{}}</span>'.format(colors["dark_1"]),
                 ),
                 widget.Chord(
                     chords_colors={

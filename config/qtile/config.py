@@ -220,6 +220,11 @@ screens = [
                         'Button1': lazy.spawn("nm-connection-editor")
                     },
                 ),
+                widget.Sep(
+                    linewidth=2,
+                    padding=10,
+                    foreground=colors["bg2"],
+                ),
                 # Network - Ethernet
                 widget.TextBox(
                     text="",
@@ -229,6 +234,11 @@ screens = [
                         'Button1': lazy.spawn("nm-connection-editor")
                     },
                 ),
+                widget.Sep(
+                    linewidth=2,
+                    padding=10,
+                    foreground=colors["bg2"],
+                ),
                 # Bluetooth
                 widget.TextBox(
                     text="",
@@ -237,6 +247,11 @@ screens = [
                     mouse_callbacks={
                         'Button1': lazy.spawn("blueman-manager")
                     },
+                ),
+                widget.Sep(
+                    linewidth=2,
+                    padding=10,
+                    foreground=colors["bg2"],
                 ),
                 # Volume
                 widget.TextBox(
@@ -252,6 +267,11 @@ screens = [
                         'Button1': lazy.spawn("pavucontrol")
                     },
                 ),
+                widget.Sep(
+                    linewidth=2,
+                    padding=10,
+                    foreground=colors["bg2"],
+                ),
                 # Battery
                 widget.Battery(
                     format="{char} {percent:2.0%}",
@@ -266,11 +286,21 @@ screens = [
                     fontsize=16,
                     show_short_text=False,
                 ),
+                widget.Sep(
+                    linewidth=2,
+                    padding=10,
+                    foreground=colors["bg2"],
+                ),
                 # Clock
                 widget.Clock(
                     format="%b %-d %-I:%M %p",
                     foreground=colors["light_1"],
                     fontsize=16,
+                ),
+                widget.Sep(
+                    linewidth=2,
+                    padding=10,
+                    foreground=colors["bg2"],
                 ),
             ],
             42,
